@@ -1,6 +1,6 @@
 import { format, isThisMonth, setMonth } from "date-fns";
-import { capitalize } from "../utils/string";
 import { ptBR } from "date-fns/locale";
+import { capitalize } from "../../../utils/string";
 
 type Props = {
   selectedDate: Date;

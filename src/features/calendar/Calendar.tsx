@@ -1,11 +1,11 @@
-import { useState } from "react";
-import YearView from "./YearView";
-import MonthView from "./MonthView";
-import DayView from "./DayView";
-import CalendarHeader from "./CalendarHeader";
+import { useState } from 'react';
+import CalendarHeader from './components/CalendarHeader';
+import YearView from './components/YearView';
+import MonthView from './components/MonthView';
+import DayView from './components/DayView';
 
-export default function CalendarWrapper() {
-  const [currentView, setCurrentView] = useState<"day" | "month" | "year">("day");
+export default function Calendar() {
+  const [currentView, setCurrentView] = useState<'day' | 'month' | 'year'>('day');
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   return (
@@ -17,21 +17,23 @@ export default function CalendarWrapper() {
         setSelectedDate={setSelectedDate}
       />
 
-      {currentView === "year" && (
+      {currentView === 'year' && (
         <YearView
           selectedDate={selectedDate}
           setSelectedDate={setSelectedDate}
           setCurrentView={setCurrentView}
         />
       )}
-      {currentView === "month" && (
+      {currentView === 'month' && (
         <MonthView
           selectedDate={selectedDate}
           setSelectedDate={setSelectedDate}
           setCurrentView={setCurrentView}
         />
       )}
-      {currentView === "day" && <DayView setSelectedDate={setSelectedDate} selectedDate={selectedDate} />}
+      {currentView === 'day' && (
+        <DayView selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
+      )}
     </div>
   );
 }
