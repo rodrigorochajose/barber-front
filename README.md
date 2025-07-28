@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# 💈 Sistema de Barbearia - Front-end (Painel do Barbeiro)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém o **front-end** do sistema de barbearia, voltado para a interface do **barbeiro**.
 
-Currently, two official plugins are available:
+Este projeto foi desenvolvido com dois principais objetivos:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Resolver um problema real de agendamento e organização em barbearias.  
+2. Aprimorar meus conhecimentos em novas tecnologias, boas práticas de desenvolvimento e automações.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧭 Visão Geral do Sistema
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Este front-end faz parte de um sistema maior, dividido em:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Painel do Barbeiro (Front-end e Back-end)** → gerenciamento completo de agenda, clientes, serviços e finanças.
+- **Interface do Cliente (via WhatsApp)** → onde os clientes agendam, cancelam e remarcam horários de forma automatizada.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Você está atualmente no repositório do **Front-end do Painel do Barbeiro**, responsável pela interface web que o barbeiro usará para controlar sua agenda e seu negócio.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🖥️ Funcionalidades da Interface
+
+- Login e autenticação de barbeiros.
+- Visualização da agenda mensal com horários disponíveis e ocupados.
+- Cadastro e gerenciamento de clientes fixos.
+- Agendamento, cancelamento e reagendamento de horários.
+- Cadastro de serviços e valores.
+- Visão geral financeira com controle de atendimentos.
+- Totalmente responsivo: funciona bem em desktop, tablet e celular.
+- Comunicação com o back-end e exibição de notificações em tempo real.
+
+---
+
+## 📚 Tecnologias e Conceitos Utilizados
+
+- 🐳 **Docker** — containerização da aplicação.
+- 🔁 **CI/CD** — automação de testes e deploy.
+- 🧪 **Testes unitários** — validação de regras de negócio.
+- 💬 **API do WhatsApp** — integração para comunicação com clientes.
+- 🤖 **Automação de processos** — envio automático de lembretes, confirmações etc.
+
+---
+
+## 🚧 Status do Projeto
+
+> Em desenvolvimento 🚀  
+A interface está sendo construída e conectada gradualmente com a API.
+
+---
