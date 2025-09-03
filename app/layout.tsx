@@ -21,18 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        <div
-          className="absolute inset-0 bg-cover bg-left"
-          style={{
-            backgroundImage: "url('/background_login.webp')",
-            opacity: 0.6,
-          }}
-          role="presentation"
-          aria-hidden="true"
-        />
-        {children}
-      </body>
+      <body className={`antialiased`}>{children}</body>
     </html>
   );
 }

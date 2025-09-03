@@ -3,6 +3,15 @@ import { LabeledInput } from "../components/labeledInput";
 export default function ForgotPassword() {
   return (
     <div className="relative w-full h-screen flex items-center justify-center bg-black-100">
+      <div
+        className="absolute inset-0 bg-cover bg-left"
+        style={{
+          backgroundImage: "url('/background_login.webp')",
+          opacity: 0.6,
+        }}
+        role="presentation"
+        aria-hidden="true"
+      />
       <div className="relative z-10 bg-white w-full max-w-sm p-8 shadow-lg rounded-xl flex flex-col items-center">
         <h1 className="text-black text-3xl font-bebas">Esqueci minha senha</h1>
 

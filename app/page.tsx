@@ -14,10 +14,10 @@ export default function Home() {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   return (
-    <div className="relative">
+    <div className="h-full bg-black">
       <Header />
-      <div className="w-full h-screen flex justify-center bg-black">
-        <div className="w-lg h-lg mt-10 mb-10 p-4 bg-secondary-dark rounded-2xl">
+      <div className="w-full h-full flex justify-center bg-black">
+        <div className="w-lg mt-10 mb-10 p-4 bg-secondary-dark rounded-2xl">
           <CalendarHeader
             currentView={currentView}
             setCurrentView={setCurrentView}
